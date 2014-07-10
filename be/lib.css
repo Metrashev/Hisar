@@ -1,0 +1,697 @@
+
+
+
+	BODY,  TD, TH, #normal {
+		font-family : verdana, arial;
+		font-size : 11px;
+		color : #000000;
+	/*	SCROLLBAR-FACE-COLOR: #f1dab4 ; 
+		SCROLLBAR-HIGHLIGHT-COLOR: white;
+		SCROLLBAR-SHADOW-COLOR: #993300; 
+		SCROLLBAR-3DLIGHT-COLOR: #993300;
+		SCROLLBAR-ARROW-COLOR: #CC6633; 
+		SCROLLBAR-TRACK-COLOR: #fff7e8;
+		SCROLLBAR-DARKSHADOW-COLOR: black;*/
+
+	}
+
+
+	INPUT, TEXTAREA, SELECT, OPTION { 
+	font-family : verdana, arial;
+		font-size : 10px;	
+	}
+	
+	.main_table {
+		width:900px;
+	}
+	
+	img {
+		border:none !important;
+	}
+	
+	.test1 { font-family : verdana, arial;
+		font-size : 12px;
+		color : #000000;
+		background-color: #fff7e8;
+		border: 1px solid #993300;
+		width:900px;
+	}
+	
+	.list_table {
+		border:1px solid #999999;
+		border-top:none;
+		background-color:transparent;
+	}
+	
+	.attrib_tab{ 
+		font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000;
+		border: 1 solid darkgreen;
+	}
+	
+	/*.header_nor{
+		background-color:#EDD1A1;
+		font-size:10px;
+		font-weight:bold;
+		color:#993300;
+		}
+		*/
+	.header_ord{
+		/*background-color:#DDD1A1;*/		
+		background:url(i/design/order1.png) repeat-x;		
+	}
+	
+	.header_ord2{
+		/*background-color:#DDD1A1;*/		
+		background:url(i/design/order2.png) repeat-x;		
+	}
+	
+	
+	.header_hli {
+		background-color:#FCAE61;
+		
+	}
+	
+	UL.menu A {
+	font-size:10px;
+	font-weight:bold;
+	color:#993300;
+	text-decoration: none;
+	}
+	
+	UL.menu A:active {
+		color:#800600;
+	}	
+	
+	.normalLI {list-style: none;}
+	.overLI {list-style: disc; color:#CC6633}
+	.downLI {list-style: disc; color:#800600}
+	
+	
+	.viewTitle 
+	{ font-family : verdana, arial;
+		background-color: #fff7e8;
+		border: 1 solid #993300;
+	}
+
+	.viewLabel
+	{ font-family : verdana, arial;
+		font-size : 10px;
+		font-weight:bold;
+		color : #fff7e8;
+		background-color: #993300;
+		padding:3px;
+		
+	}
+	
+	.button {
+		background-color:#B1BFC5;
+		border: 1px solid #000000;
+	}
+	
+	.button_red {
+		background-color:#E32D0D;
+		border: 1px solid #000000;
+		color:white;
+	}
+	
+	
+	hr {color:#CCCCCC;
+		height:1px;
+		border:none;
+		background-color:#CCCCCC;
+	}
+	
+	.page_bar {
+		/*background-color:#f1dab4;*/
+		background:url(i/design/pagebar.png) repeat-x;
+		cellspacing:0; 
+		cellpadding:3;
+		border:0;
+		height:30px;
+	}
+	
+	.page_bar td {
+		color:#416389;
+	}
+
+	.white{color : #FFFFFF;}
+
+	.selectede {font-family: verdana; font-size: 10px; color: #00000;  solid: #ffcccc}
+
+	a, anormal { font-family : verdana, arial;
+		font-size : 11px;
+		color : #D90F0F;
+		font-weight:bold;
+		text-decoration : none;
+	}
+	
+	
+	.hDelete{ font-family : verdana, arial;
+		font-size : 10px;
+		color : #CC6633;
+		font-weight:bold;
+		text-decoration : none;
+	}
+	
+	.hDeleteOver { font-family : verdana, arial;
+		color : #800600;
+		font-weight:bold;
+		font-size:10px;
+		text-decoration : underline;
+		cursor:hand;
+	}
+	
+	.hrTD {
+		background-color:#F1DAB4;
+		border-bottom:1px solid #993300;
+	}
+
+	.hlTD {
+		background-color:#EDD1A1;
+		border-bottom:1px solid #993300;
+		border-right:1px solid #993300;
+	}
+	
+	.error {color:red;}
+	
+	UL {
+		margin:3px;padding-left:15px;
+	}
+	
+	
+/*
+	A:link    { }
+	A:active  { }
+	A:visited { }
+*/
+
+	#fnavl {font-size : 10px;}
+
+
+	#msg_border { font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000;
+		font-weight: normal;
+		background-color: #cccccc;
+		border: 1 solid #000000;
+		padding : 2;
+	}
+	#MsgBorder { font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000;
+		font-weight: normal;
+		background-color: #cccccc;
+		border: 1 solid #000000;
+		padding : 2;
+	}
+
+	#title { font-family : verdana, arial;
+		font-size : 11px;
+		color : #232323;
+		font-weight: bold;
+	}
+
+	#TTitleS { font-family : verdana, arial;
+		font-size : 11px;
+		color : #232323;
+		font-weight: bold;
+	}
+	#TTitleB { font-family : verdana, arial;
+		font-size : 16px;
+		color : #232323;
+		font-weight: bold;
+	}
+
+	#headline { font-family : verdana, arial;
+		font-size : 15px;
+		color : #000000;
+		font-weight: bold;
+	}
+
+	#f12 {font-size : 12px;}
+
+
+/* Poll */
+
+
+
+#PollBox {border-left-width:1px; border-bottom-width:1px; border-right-width:1px; border-top-width:1px; border-style:solid; border-color:#FF0000; padding:0px;}
+	#PollTitle { font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000;
+		font-weight: bold;
+	}
+	#PollQuestion { font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000;
+		font-weight: bold;
+	}
+	#PollAnswer { font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000
+	}
+	#PollRadio {}
+	#PollComment {font-family : verdana, arial;
+		font-size : 10px;
+		color : #000000}
+	#PollText {width:140px;} 
+	#PollVote {} 
+
+
+/*HEADER START */
+
+TD.HeaderDate {color : #FFFFFF;}
+TD.HeaderStrapline{color : #FFFFFF;font-size : 12px;}
+
+
+#HeaderDate {font-family : verdana, arial;font-size : 11px;color : #FFFFFF;}
+
+/*HEADER END */
+
+/* LEFT COLUMN  START*/
+
+
+#LoginInput {width:140px;}
+
+#AddressBox {width:160px; padding: 5px 5px 5px 10px;
+	font-family : verdana, arial;
+	font-size : 11px;
+	color : #000000
+}
+
+#FooterLeft {width:160px; padding: 0px 5px 0px 10px;}
+
+
+
+
+TD.Context {border-style:solid; border-left-width:1px; border-bottom-width:0; border-right-width:0; border-top-width:1; border-color:#CCCCCC; padding-left:2px; padding-top:2px;}
+
+.schedhead {width:150px; border:1px solid #999999; background-color: #ECE9D8; color:#663300}
+.sched {display:none; background-color:#FFE8A2; font-size: 10px; color:#663300; padding:2px; border-bottom:1px solid #999999;}
+.schedtitl {position:absolute; width:200px; background-color:#FFFFE0; border: 1px solid black; padding:3px; visibility: hidden;}
+
+
+TABLE.list {border: 2px solid #EDD1A1;}
+H3 {color: #CC6633}
+
+table.boxTable {
+	width:100%;
+	border:1px solid red;
+	background-color:aliceblue;
+}
+
+/*   CALENDAR CONTROL */
+
+table.pvCalendar {
+	width:100%;
+}
+
+table.pvCalendar td {
+	border:1px solid #CCCCCC;
+	vertical-align:top;
+}
+
+table.pvCalendar table td {
+	border:none;
+}
+
+table.pvCalendar table {
+	width:100%;
+	
+}
+
+table.pvCalendar td.pvCDay {
+	text-align:right;
+	color:#0E076F;
+}
+
+td.pvCLink {
+	height:30px;	
+}
+
+td.pvCLink a {
+	color:#FF6600;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+td.pvCalendarHeader {
+	border:1px solid #CCCCCC;
+	vertical-align:top;
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#FF6600;
+}
+
+.pvCalendarNav {
+	width:100%;
+}
+
+.pvCalendarNav a{
+	color:#FF6600;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.pvCalendarToday {
+	background-color:lightyellow;
+}
+
+.question {
+	border:1px solid #993300;
+}
+
+/*  END CALENDAR CONTROL */
+
+
+.tab_selected {
+	padding:0px 5px;
+	height:10px !important;
+	border-top:2px inset #aaaaaa;
+	border-left:2px inset #aaaaaa;
+	border-right:2px inset #aaaaaa;
+}
+
+.normal_tab {
+	padding:0px 5px;
+	height:20px !important;
+	border-top:2px outset #CCCCCC;
+	border-left:2px outset #CCCCCC;
+	border-right:2px outset #CCCCCC;
+}
+
+.tabTable {
+	border:3px outset #ffffff;
+	background-color:#BBC2A5;
+}
+
+.tabDiv {
+	padding:0px;
+}
+
+/*   DRAG TABLE  */
+
+.tr_norRow {
+	background-color:#EFEFEF;
+	padding:2px;
+}
+
+.tr_altRow {
+	background-color:#FAFAFA;
+	padding:2px;
+}
+
+.tr_overRow {
+	background-color:#FFE2A8;
+		padding:2px;
+}
+
+
+/* tozi class e VAJEN za tablica na koqto kolonite se prepodrejdat */
+.dragme{
+position:relative !important;
+background-color:#F9B804 !important;
+
+}
+
+.footer_label {
+	font-size:10px;
+	text-align:right;
+	vertical-align:top;
+	font-weight:bold;
+}
+
+.footer_label_r {
+	font-size:10px;
+	vertical-align:top;
+}
+
+/* CONTROL CLASSES */
+
+.con_input {
+	border:1px solid #999999;
+}
+
+.con_input_required {
+	border:1px solid #cc0000;
+}
+
+.con_checkbox {
+	border:1px solid #999999;
+}
+.con_checkbox_required  {
+	border:1px solid #cc0000;
+}
+
+.con_radio {
+	border:1px solid #999999;
+}
+.con_radio_required  {
+	border:1px solid #cc0000;
+}
+
+.con_select {
+	border:1px solid #999999;
+}
+.con_select_required  {
+	border:1px solid #cc0000;
+	background-color:#FFE8EA;
+}
+
+.con_textarea {
+	border:1px solid #999999;
+	/*SCROLLBAR-FACE-COLOR: #f1dab4 ; 
+	SCROLLBAR-HIGHLIGHT-COLOR: white;
+	SCROLLBAR-SHADOW-COLOR: #999999; 
+	SCROLLBAR-3DLIGHT-COLOR: #999999;
+	SCROLLBAR-ARROW-COLOR: #ffffff; 
+	SCROLLBAR-TRACK-COLOR: #cccccc;
+	SCROLLBAR-DARKSHADOW-COLOR: black;*/
+}
+.con_textarea_required {
+	border:1px solid #cc0000;
+	/*SCROLLBAR-FACE-COLOR: #f1dab4 ; 
+	SCROLLBAR-HIGHLIGHT-COLOR: white;
+	SCROLLBAR-SHADOW-COLOR: #cc0000; 
+	SCROLLBAR-3DLIGHT-COLOR: #cc0000;
+	SCROLLBAR-ARROW-COLOR: #ffffff; 
+	SCROLLBAR-TRACK-COLOR: #cc0000;
+	SCROLLBAR-DARKSHADOW-COLOR: black;*/
+}
+
+
+.con_label {
+	border:1px solid #999999;
+}
+
+/* CONTROL CLASSES */
+
+
+/* NEW design */
+
+.viewHeader {
+	width:100%;
+	height:28px;
+}
+
+.viewHeaderLeft {
+	background:url(i/design/header.png) repeat-x;
+	text-align:left;
+	width:1px;
+}
+
+.viewHeaderRight {
+	background:url(i/design/header.png) repeat-x;
+	text-align:right;
+	width:1px;
+}
+
+.viewHeaderTitle {
+	font-size:17px;
+	font-weight:bold;
+	color:#ffffff;
+	background:url(i/design/header.png) repeat-x;
+	text-align:center;
+}
+
+.viewList {
+	border:1px solid #999999;
+	padding:1px;
+}
+
+.viewList div, div.viewDiv {
+	background:url(i/design/gray_bgr.png) bottom left repeat-x;
+	text-align:left;
+	color:#333333;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px;	
+}
+
+div.viewDiv {
+	background:url(i/design/gray_bgr.png) bottom left repeat-x;
+	text-align:left;
+	color:#333333;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px;	
+	height:24px;
+	border:1px solid #999999;
+}
+
+.table {
+	font-size : 12px;
+	color : #000000;
+	background-color: #ffffff;
+	width:100%;
+	border:1px solid #CCCCCC;
+}
+
+.table_attributes {
+	font-size : 12px;
+	color : #000000;
+	background-color: #ffffff;
+	width:100%;	
+}
+
+.table td {
+	color:#416389;
+}
+
+.submit {
+	background:url(i/design/button.png) top left no-repeat;
+	height:20px;
+	width:60px;
+	color:#000000;
+	font-size:11px;
+	border:none;
+	font-family:verdana;	
+}
+
+.delete_button {
+	background:url(i/design/delete_button.png) top left no-repeat;
+	height:20px;
+	width:90px;
+	color:#ffffff;
+	font-size:11px;
+	border:none;
+	font-family:verdana;	
+}
+
+.print_button {
+	background:url(i/design/print.png) top left no-repeat;
+	height:18px;
+	padding-left:12px;
+	color:#000000;
+	font-size:11px;
+	border:none;
+	font-family:verdana;	
+	cursor:hand;
+}
+
+.excel_button {
+	background:url(i/design/excel.png) top left no-repeat;
+	height:18px;
+	width:50px;
+	border:none;
+	cursor:hand;
+}
+
+.listTableHeader {
+	border:1px solid #999999;
+	padding:1px;		
+}
+
+.listTable {
+	background:url(i/design/gray_bgr.png) bottom left repeat-x;
+	height:18px;
+}
+
+.listTable div {
+	color:#333333;
+	font-weight:bold;
+	font-size:13px;
+	padding:2px 5px;
+}
+
+tr.list_header {
+	height:30px;
+	background:url(i/design/table_header.png) bottom left repeat-x;
+	padding:0px 5px;
+}
+
+tr.list_header td {
+	border-right:1px solid #ffffff;
+}
+
+tr.list_header td a {
+	color:#000000;
+	font-weight:bold;
+}
+
+.header_add {
+	background:#BC0D0D url(i/design/red_bgr.png) repeat-x;
+}
+
+
+.header_add a {
+	color:#ffffff !important;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.list_table td {
+	color:#333333;
+	padding:3px;
+}
+
+.list_table tbody td {
+	border-right:1px solid #CCCCCC;
+	padding:3px;
+}
+
+a.delete {
+	font-weight:normal;
+}
+
+.button_calendar {
+	background:url(i/design/calendar.png) top left no-repeat;
+	height:15px;
+	width:18px;
+	border:none;
+	margin-left:5px;
+	cursor:hand;	
+}
+
+/* NEW design */
+
+
+.listBox {
+	border:1px solid #cccccc;
+	padding:5px;
+	overflow:auto;
+	height:500px;
+}
+
+.listBox div {
+	cursor:default;
+}
+
+.listbox_selected {
+	background:#0A246A;
+	color:#ffffff;
+}
+
+label {
+	border:1px solid #cccccc;
+	background:#F0F0EE;
+	padding:1px 5px;
+	display:inline-block;
+	color:#000;
+}
+
+td._tdl {
+	text-align:right;
+}
