@@ -1,0 +1,60 @@
+div.GalleryContainer {
+	margin-top:10px;
+	width:300px;
+	height:85px;
+	overflow:auto;
+	overflow-x:scroll;
+	border: 1px solid #666666;
+	padding:10px;
+/*
+	scrollbar-arrow-color: #000066;
+	scrollbar-base-color: #A0AEC5;
+	scrollbar-dark-shadow-color: white;
+	scrollbar-track-color: #A0AEC5;
+	scrollbar-face-color: #A0AEC5;
+	scrollbar-shadow-color: white;
+	scrollbar-highlight-color: #7088A9;
+	scrollbar-3d-light-color: #000066;
+*/	
+}
+
+
+div.GalleryContainer img {
+	border:0px;
+}
+
+
+
+div.GalleryContainer td {
+	padding:3px;
+	height:60px;
+}
+
+
+.LargeImageTable {
+	width:100%;
+	border: 1px solid #666666;
+	height:400px;
+}
+
+.LargeImageTable td {text-align:center;}
+
+.LargeImageTable img {
+	display:block;
+	margin:0px auto;
+	border:none;
+}
+
+div.GalNavBtns {
+text-align:center;
+}
+
+div.GalNavBtns a {
+	color:#999999;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+div.GalNavBtns a:hover {
+	color:#FDE34C;
+}

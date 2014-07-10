@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css"  href="/lib.css" />	
+</head>
+
+<body>
+
+<form method="POST" id="ProgrammeFeedBackForm" >
+
+	<h1><?=$data['title']?></h1>
+	
+	<p><?=$data['body']?></p>
+
+	<table cellpadding="0" cellspacing="0">
+	
+	
+	<tr>
+		<th><label for="name">Name</label></th>
+		<td>
+			<input style="width:300px;" type="text" id="name" name="name" required="true" />
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th><label for="email">Email</label></th>
+		<td>
+			<input style="width:300px;" type="text" id="email" name="email" required="true" regexp="email" regexp_msg="<b>Email</b> is invalid!" />
+		</td>
+	</tr>
+	
+
+	<tr>
+		<th style="vertical-align:top;"><label for="themes">Themes of interest</label></th>
+		<td>
+		<group id="themes" name="themes" required="true" min="2" max="4" min_msg="Select min 2 Themes" max_msg="Select max 4 Themes" />
+<?php
+	$optionNames = array(
+		1=>'asdasdas',
+		2=>'asdsada',
+		3=>'<a href="/">test</a>',
+		4=>'346fgfg',
+		5=>'as344',
+	);
+		
+	$optionList = array();
+	foreach ($optionNames as $k=>$item)
+	{
+		$id = "themes_{$k}_";
+		$optionList[] = <<<EOD
+			<input type="checkbox" id="{$id}" name="themes[{$k}]" value="{$k}" {$isCheck} /> 
+			<label for="{$id}">{$item}</label>
+EOD;
+		
+	}
+	
+	$optionList = convert_1d_to_2d_array( $optionList, "Horizontal" , 2 );
+	$optionList = arrayToTableStyle($optionList);
+	echo <<<EOD
+		<table>
+			{$optionList}
+		</table>
+EOD;
+?>
+		</td>
+	</tr>
+
+	<tr readonly='hidden'>
+		<th style="vertical-align:top;"><label for="spam_code">Spam Code</label></th>
+		<td>
+			<input style="width:100px;" type="text" id="spam_code" name="spam_code" required="true" />
+			<p><img src='/image_test.php' align='middle' /></p>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th></th>
+		<td>
+			<input type="checkbox" id="agree" name="agree" value="1" /> 
+			<label for="agree">Please untick the box if you would <b>not</b> like to receive from Information TV news of updates and latest developments.</label>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th></th>
+		<td>
+			<input type="checkbox" id="third_party" name="third_party" value="1" /> 
+			<label for="third_party">Please tick the box if you are happy for us to pass on your information to our sponsors.</label>
+		</td>
+	</tr>	
+	
+	
+	<tr>
+		<th></th>
+		<td>Read our <a href="/?cid=54" target="_blank">Privacy Policy</a>.</td>
+	</tr>	
+	
+	
+	<tr>
+		<th></th>
+		<td>
+			<input type="submit" name="Submit" value="Send">
+		</td>
+	</tr>
+	
+	</table>
+	<select name="pol[]" multiple="true">
+	<option>1  
+	<option>  2
+	<option value="3">3
+	</select>
+
+</form>
+
+
+
+
+
+</body>
+</html>

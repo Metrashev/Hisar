@@ -1,0 +1,91 @@
+<?php
+
+class CBOProducts extends ABOBase {
+	
+	static $PTypes = array(1=>'zele');
+	
+	public $fields = array(
+		'id'=> array('type'=>'AutoIncrement', 'label'=>'id'),
+		'name_bg'=> array('type'=>'string', 'label'=>'Име', 'size'=>255),
+		'name_en'=> array('type'=>'string', 'label'=>'Name', 'size'=>255),
+		
+		'product_type'=> array('type'=>'Enum', 'label'=>'Product Type', 'array'=> 'CBOProducts::$PTypes'),
+		'service_id'=> array('type'=>'BORef', 'label'=>'Service Type', 'table'=> 'services'),
+		'campaign_id'=> array('type'=>'DBRef', 'label'=>'Campain', 'table'=> 'campaigns'),
+		'order_field'=> array('type'=>'OrdField', 'label'=>'Order'),
+		'is_top_product'=> array('type'=>'Boolean', 'label'=>'Is top'),
+		
+		'start_date'=> array('type'=>'Date', 'label'=>'Start'),
+		'end_date'=> array('type'=>'Date', 'label'=>'End'),
+		'description_bg'=> array('type'=>'HTML', 'label'=>'Описание', 'size'=>65535),
+		'description_en'=> array('type'=>'HTML', 'label'=>'Description', 'size'=>65535),
+		'uploaded_file'=> array('type'=>'ImgManaged', 'label'=>'Picture', 'size'=>255),
+		
+		
+		'service_name0'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'fullList', 'sql'=>'select id,name_bg from services', 'refField'=>'service_id'),
+		'service_name1'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'fullList', 'fCall'=>array('CBOServices', 'getList', array('id,name')), 'refField'=>'service_id'),
+		'service_name2'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'fullList', 'array'=>'pesho', 'refField'=>'service_id'),
+		'service_name3'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'rangeList', 'sql'=>'select id,name_bg from services WHERE id IN (?)', 'refField'=>'service_id'),
+		'service_name4'=> array('calculated'=>true, 'type'=>'struct', 'label'=>'Име', 'size'=>255, 'ref'=>'id', 'sql'=>'select name_bg from services WHERE id=?', 'refField'=>'service_id'),
+		'service_name5'=> array('calculated'=>true, 'type'=>'struct', 'label'=>'Име', 'size'=>255, 'ref'=>'id', 'fCall'=>array('CBOServices', 'getRowById', array('id,name')), 'refField'=>'service_id'),
+
+		'campain_name'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'rangeList', 'sql'=>'select id,name_bg from campaingns where id in (?)', 'refField'=>'campaign_id'),
+		'campain_name2'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'rangeList', 'fCall'=>array('CBOCampaigns', 'getRangeList', array('id,name')), 'refField'=>'campaign_id'),
+		'campain_name3'=> array('calculated'=>true, 'type'=>'string', 'label'=>'Име', 'size'=>255, 'ref'=>'id', 'refField'=>'campaign_id'),
+		'lead_img'=> array('calculated'=>true, 'type'=>'struct', 'label'=>'Име'),
+		'lead_img2'=> array('calculated'=>true, 'type'=>'struct', 'label'=>'demo 2'),
+		'lead_img3'=> array('calculated'=>true, 'type'=>'struct', 'ref'=>'id', 'refField'=>'id', 'fCall'=>'', 'fParams'=>''),
+		
+		
+		'client_name_bg' => array('type'=>'string', 'SubSelect'=>'(select clients.name_bg from clients left join campaigns ON clients.id=campaigns.client_id  where campaigns.id=products.campaign_id)'),
+		'client_name_en' => array('type'=>'string', 'SubSelect'=>'(select clients.name_en from clients left join campaigns ON clients.id=campaigns.client_id  where campaigns.id=products.campaign_id)'),
+		
+		'service_name_bg' => array('type'=>'string', 'SubSelect'=>'(SELECT services.name_bg FROM services WHERE services.id=products.service_id)'),
+		'service_name_en' => array('type'=>'string', 'SubSelect'=>'(SELECT services.name_en FROM services WHERE services.id=products.service_id)'),
+		
+
+	);
+	public $lngFields = array('name'=>1, 'description'=>1, 'client_name'=>1, 'service_name'=>1);
+	
+	public $tableName = 'products';
+	
+
+	
+	function calculateList($data, $fieldsToCalc){
+		if(empty($data)) return $data;
+		
+		$data = parent::calculateList($data, $fieldsToCalc);
+		
+
+		
+		if($fieldsToCalc['lead_img']){
+			$g = new CBOGallery($this->lng);
+			foreach ($data as &$row){
+				$row['lead_img'] = $g->getRow('id, small_img_src, normal_img_src, text', "cid=11 AND page_id = {$row['lead_img']}", 'order_field');
+			}
+		}
+
+		return $data;
+	}
+
+
+	function modifyQueryForCalc($fieldsToCalc, CSQLQueryBuilder $qb){
+		parent::modifyQueryForCalc($fieldsToCalc, $qb);
+		//if($fieldsToCalc['service_name']) $qb->fields[] = 'service_id AS service_name';
+		
+	
+		
+		if($fieldsToCalc['lead_img']){
+			$qb->fields['lead_img'] = 'id';
+		}
+		
+		if($fieldsToCalc['lead_img2']){
+			$t = new CBOGallery();
+			$a = $t->getSubSelect('11', $this->tableName.'.id');
+			$qb->fields[] = "($a ) AS lead_img2";
+		}
+	}
+
+}
+
+?>

@@ -1,0 +1,11 @@
+@import url(lib.css);
+body {
+	background-image:none;
+	background: #FFFFFF;
+	text-align:left;
+	padding:5px;
+}
+
+script {
+	background:red;
+}

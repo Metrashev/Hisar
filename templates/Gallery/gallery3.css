@@ -1,0 +1,31 @@
+
+.picture-container {display:block;width:480px;height:400px;background:#eee;border:1px solid #999;margin-bottom:2px;position:relative;}
+.picture-container img {position:absolute;display:none;}
+
+.gallery-nav {text-align:right;padding:2px 0;}
+
+.scroll-bar {position:relative;height:10px;background:#eee;border:1px solid #999;}
+.scroll-handler {width:20px;height:10px;position:absolute;top:0;left:0;background:#999;cursor:pointer;overflow:hidden;}
+
+.thumbs-container {
+clip: rect(0px, 0px, 50px, 50px);
+overflow:hidden;
+height:58px;margin:0;position:relative;border:1px solid #999;/*border-top:0px;*/margin-top:2px;}
+.thumbs {position:relative;}
+.thumbs td {padding:4px;}
+.thumbs img {border:1px solid #999;
+/*
+		opacity: .5;
+		filter: alpha(opacity=50);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";		
+	*/
+}
+
+
+.thumbs-container {width:480px;
+}
+
+.thumbSelected {background:#FFFF7F;}
+
+
+#gallery-thumbs-bottom {height:0;padding:0;}
